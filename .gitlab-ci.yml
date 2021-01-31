@@ -1,0 +1,58 @@
+image: node:latest
+
+cache:
+   paths:
+       - node_modules/
+
+Test:
+  script:
+        - rm -rf .specs
+        - git config --global user.email "jindal.swapnil2@gmail.com"
+        - git config --global user.name "Swapnil"
+        - git add . && git commit -m "Merged .specs deleted"
+        - git subtree add --prefix .specs/ https://workspace.konfinity.com/swapnil/css-v1-specs.git master
+        - npm install
+        - npm run test
+  only:
+    refs:
+      - master
+
+CSS-Setup-and-Selector:
+  script:
+        - npm install
+        - npm run test
+  only:
+    refs:
+      - 1-css-setup-and-selector
+
+CSS-Visual-Rules:
+  script:
+        - npm install
+        - npm run test
+  only:
+    refs:
+      - 2-css-visual-rules
+        
+The-Box-Model:
+  script:
+        - npm install
+        - npm run test
+  only:
+    refs:
+      - 3-the-box-model
+        
+CSS-Display-and-Positioning:
+  script:
+        - npm install
+        - npm run test
+  only:
+    refs:
+      - 4-css-display-and-positioning
+        
+Coffee:
+  script:
+        - npm install
+        - npm run test
+  only:
+    refs:
+      - 5-coffee

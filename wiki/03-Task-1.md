@@ -1,0 +1,1 @@
+1. In **index.html**, use inline styles to set the `font-family` of the first paragraph to `Arial`.

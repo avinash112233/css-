@@ -1,0 +1,5 @@
+Developers avoid mixing code by storing HTML and CSS code in separate files (HTML files contain only HTML code, and CSS files contain only CSS code).
+
+You can create a CSS file by using the **.css** file name extension, like so: **stylesheet.css**
+
+With a CSS file, you can write all the CSS code needed to style a page without sacrificing the readability and maintainability of your HTML file.
